@@ -1,0 +1,87 @@
+# Rebranding Tasks
+
+- [ ] Update `client/src/index.css` with new brand colors
+    - Ivory White: #F0E7DF
+    - Warm Beige: #DBCABD
+    - Terracotta Red: #B54C2B
+    - Light Butter: #F7DDB5
+    - Spark Blue: #4A8DCE
+    - Dark Graphite: #2B2B2B
+- [ ] Update Button component styles to use Spark Blue shadows instead of green
+- [ ] Update Home page sections to use Warm Beige/Ivory White backgrounds
+- [ ] Regenerate Hero illustration with Spark Blue theme and geometric shapes (stars, arrows)
+- [ ] Regenerate Dashboard images with Spark Blue data visualization
+- [ ] Add decorative SVG icons (stars, arrows) to the layout
+- [ ] Verify text contrast (Dark Graphite on Ivory White)
+- [ ] Ensure ALL CTA buttons have: White background, Black text, Spark Blue shadow (#4A8DCE)
+- [ ] Create `client/src/components/BrandIcons.tsx` with exact SVG replicas of the provided brand icons:
+    - Terracotta Starburst
+    - Beige 12-Point Star
+    - Blue 6-Point Star
+    - Black Semicircle
+    - Beige Geometric Diamond/Cross
+    - Red 4-Point Star
+    - Yellow Circle
+    - Hand-drawn Arrows
+- [ ] Remove `hero-illustration.png` from Home page
+- [ ] Rebuild Hero section using the new `BrandIcons` components to create a composition in code
+- [ ] Replace all other "Lucide" generic icons (Stars, Sparkles) with the new Brand Icons where appropriate
+- [ ] Update `client/src/components/BrandIcons.tsx` to export `motion` components (using Framer Motion)
+- [ ] Animate Hero Section icons:
+    - Rotate stars continuously
+    - Float/bob elements up and down
+    - Pulse the "profit" badge
+- [ ] Add floating background icons to:
+    - Process Section (drifting stars)
+    - Testimonials Section (spinning shapes)
+    - Footer (bouncing elements)
+- [ ] Ensure animations are smooth and not overwhelming (use slow durations)
+- [ ] Remove border-bottom from Navbar to make it seamless with Hero
+- [ ] Update all white buttons: Change border color from black to Spark Blue (#4A8DCE)
+- [ ] Expand Hero Section composition:
+    - Move icons to cover the FULL width of the hero (left, center, right)
+    - Position some icons behind the main text
+    - Ensure icons are "all over the place" but balanced
+    - Keep the "profit" badge visible and un-obscured
+- [ ] Hero Section: Rotate Black Semicircle 90 degrees (flat side to right) and align it sticky to the right edge of the screen
+- [ ] ValueProp Section: Replace dashboard image with a video player look-alike (or real video tag) with a Play button overlay
+- [ ] Hero Section: Move "41% Client Avg Revenue" and "$100M+ Generated" stats to the right side of the layout
+- [ ] Hero Section: Remove the "Doubled our email revenue in 2 months" floating badge
+- [ ] Remove the decorative line/arrow element positioned behind the main CTA button in the Navbar or Hero section
+- [ ] Update Navbar menu items to: "Case Study", "Proces", "Opinie" (Polish)
+- [ ] Implement full Polish website copy from `website_copy_draft.md` into `Home.tsx`
+- [x] Draft new content for "Strategy" section (Polish) replacing "Ads + Email Flywheel" with a 3-phase timeline (Analiza, Wdrożenie, Skalowanie).
+- [x] Implement the "Proces Skalowania" section in `Home.tsx` with 3 cards (Days 1-7, 7-45, 45+) and a "Co Dokładnie Otrzymujesz" list, matching the WellCopy design.
+- [x] Draft unique Polish copy for Strategy section with new timelines (Days 7-30, 30+).
+- [x] Replace generic icons in Strategy section with Brand Icons (BlueStar6, GeometricDiamond, TerracottaStarburst).
+- [x] Update "What You Get" CTA button style to: White Background, Black Text, Blue Shadow (identical to other CTAs).
+- [x] Update "What You Get" section border to `border-2` and add bottom-right shadow `shadow-[8px_8px_0px_0px_#2B2B2B]`.
+- [x] Remove decorative top bar (top shadow) from "What You Get" section.
+- [ ] Replace Case Study placeholder chart with real dashboard image `pasted_file_d849ML_image.png`.
+- [x] Replace Case Study placeholder chart with real dashboard image `pasted_file_d849ML_image.png`.
+- [ ] Redesign Case Study section to be clean/white instead of dark.
+- [ ] Implement large card layout with metrics on left and dashboard image on right.
+- [x] Redesign Case Study section to be clean/white instead of dark.
+- [x] Implement large card layout with metrics on left and dashboard image on right.
+- [ ] Update Case Study CTA button to: White Background, Black Text, Blue Shadow `shadow-[4px_4px_0px_0px_#4A8DCE]`, Blue Border `border-2 border-[#4A8DCE]`.
+- [x] Update Case Study CTA button to: White Background, Black Text, Blue Shadow `shadow-[4px_4px_0px_0px_#4A8DCE]`, Blue Border `border-2 border-[#4A8DCE]`.
+- [ ] Move Case Study section above Process section (Proof before Promise).
+- [ ] Update Case Study headline to "Wygenerowaliśmy dla naszych Klientów ponad 20 mln PLN".
+- [x] Move Case Study section above Process section (Proof before Promise).
+- [x] Update Case Study headline to "Wygenerowaliśmy dla naszych Klientów ponad 20 mln PLN".
+- [ ] Revamp Navbar:
+    - [ ] Update menu items to: "Case Studies", "Opinie", "Metoda".
+    - [ ] Center menu items between Logo and CTA.
+    - [ ] Increase Logo size (scale 1.2 or larger).
+    - [ ] Increase Menu Text size (text-lg or larger) and weight.
+    - [ ] Increase CTA Button size (padding and font size).
+- [x] Revamp Navbar:
+    - [x] Update menu items to: "Case Studies", "Opinie", "Metoda".
+    - [x] Center menu items between Logo and CTA.
+    - [x] Increase Logo size (scale 1.2 or larger).
+    - [x] Increase Menu Text size (text-lg or larger) and weight.
+    - [x] Increase CTA Button size (padding and font size).
+- [ ] Increase Hero H1 line spacing (relaxed leading).
+- [ ] Replace standard arrow icon in Hero with `ArrowLoop` (curved brand arrow).
+- [x] Increase Hero H1 line spacing (relaxed leading).
+- [x] Replace standard arrow icon in Hero with `ArrowLoop` (curved brand arrow).
