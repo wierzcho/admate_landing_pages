@@ -1,7 +1,5 @@
 # Propaganda (Big Idea) - admate.pl
 
-**My ICP:** Female ecommerce business owners between the ages of 30-50 who make between $200k and $1 million per year in revenue.
-
 ---
 
 ## What is Propaganda?
@@ -12,83 +10,100 @@ A propaganda statement is a **bold, provocative belief** that:
 - Positions your unique approach as the solution
 - Is NOT generic advice (bad: "You need more creatives")
 
----
 
-## Top 4 Bilingual Propaganda
+BIG IDEA - Overall marketing strategy that everything is based around it, ads, outreach, lead magnets, email flows. 
 
-*Selected for punch, rhythm, and meaning in both Polish and English*
 
-| # | English | Polish |
-|---|---------|--------|
-| 1 | "Your ad account isn't broken. Your ads are just boring." | "Twoje konto reklamowe nie jest zepsute. Twoje reklamy są po prostu nudne." |
-| 2 | "You don't have a scaling problem. You have a creative problem." | "Nie masz problemu ze skalowaniem. Masz problem z kreacjami." |
-| 3 | "Your product isn't the problem. The way you're showing it is." | "Twój produkt nie jest problemem. Sposób, w jaki go pokazujesz - jest." |
-| 4 | "The best media buyers in the world can't save a bad creative." | "Najlepsi specjaliści od Meta Ads nie uratują słabej kreacji." |
+Matt's examples GOOD ONES (from lead gen mentor perspective):
+1. Every problem in your business can be traced back to you not generating enough leads
+  - you have to babysit your employees because you cannot hire enough people, because you dont have enough leads, you have to hire idiots
+  - you cant afford to fire your nightmare client because you are not confident enough to replace the, because you dont have enough leads
+  - you've been stuck in revenue plato for too long because you are not generating enough leads to overcome your churn
+  - you have too much churn because you have retards working for you because you dont generate enough leads tp hire A players
 
-### Why These 4?
-- **Translate naturally** (no awkward phrasing)
-- **Maintain emotional punch** in both languages
-- **Use concepts familiar** to Polish ecom owners ("skalowanie", "kreacje")
-- **Short & punchy** - don't get wordy in Polish
 
----
+BAD EXAMPLE (too shallow, touching just surface layer):
+1. you need to generate more leads - 
 
-## WINNER: "Your ad account isn't broken. Your ads are just boring."
 
-### Why This Works
-- **Provocative:** Calls out the ICP directly (slightly uncomfortable = good)
-- **Shifts blame:** From algorithm/targeting to creative (something they control)
-- **Positions your offer:** Creative variations = the obvious solution
-- **Memorable:** Short, punchy, shareable
+
+
 
 ---
 
-### The Enemy (Conventional Wisdom It Attacks)
+## Top 3 Propaganda Candidates
 
-| What They Currently Believe | The Truth |
-|----------------------------|-----------|
-| "The algorithm hates me" | The algorithm rewards fresh, engaging creatives |
-| "I need better targeting" | Creative drives 56% of ad performance, not targeting |
-| "My CPA is too high because of iOS updates" | iOS changes affected everyone - winners adapted creatives |
-| "I need to hire a better media buyer" | The best media buyer can't save boring ads |
-| "Facebook ads don't work anymore" | They work better than ever for those with strong creatives |
+### #1 - CORE PROPAGANDA (the spine)
+
+**"Every problem in your ecom ads traces back to having only one way to say 'buy this.'"**
+
+Alternative flags:
+- "You do not have a scaling problem. You have a message monopoly."
+- "If you have one winning angle, you do not have a marketing system. You have a fragile lucky streak."
+
+**Pick: Option 1** — clearest, most Matt-like.
+
+**Chain reaction (Matt-style expansion):**
+
+Big Idea: One message cannot carry a business.
+
+- CPAs climb → because the market has already heard your one angle and stopped responding
+- Scaling stalls → because one ad story cannot support more budget without collapsing
+- You feel dependent on a single winner → because you have no message bench
+- Agencies "optimize settings" → because there is nothing new to say, only knobs to turn
+- Competitors pass you → because they have a system that outputs 10 angles while you recycle one
+
+**Punchline:** "Your job is not to find a new ad. Your job is to build a message bench."
+
+
+### #2 - DISPLACEMENT WEAPON (aggressive acquisition angle)
+
+**"If your agency has run the same 3 ads for 6 months, you do not have management. You have dependence."**
+
+Variants:
+- "The reason you cannot fire them is simple. You do not have a system to produce new angles."
+- "Most agencies plateau because their business model cannot ship new iterations weekly."
+
+Role: Competitor conquest ads. NOT the main big idea — it centers the agency, not her business.
+
+
+### #3 - EMOTIONAL WRAPPER (the hook/opener)
+
+**"You built a goldmine. Your ads are showing people the dirt."**
+
+Variants:
+- "Your product is premium. Your message is not."
+- "The problem is not your product. It is the way you explain it."
+
+Role: Opens the story, validates the founder, then lands the spine (#1).
+
 
 ---
 
-### Proof Points
+## How They Work Together
 
-- **Meta's own data:** Creative drives 56% of ad performance
-- **Your client results:** Cosmetics client generating 61k PLN/month
-- **Industry stat:** Ad fatigue sets in after 500-1000 impressions
-- **Before/after case studies:** Creative refresh results
+**Open with #3** (emotional wrapper) → **Land the spine with #1** (core propaganda) → **Use #2** as ad angle for competitor conquest
 
----
+Example flow:
+> "You built a goldmine. Your ads are showing people the dirt."
+> → "That disconnect happens when you only have one way to say why someone should buy."
 
-### Variations to Test
+**Unified propaganda statement (master narrative):**
+> "You are sitting on a goldmine, but you only have one way to explain it. That is why your ads plateau, and why agencies keep you dependent on the same three creatives."
 
-1. "Your ad account isn't broken. Your ads are just boring."
-2. "Stop blaming the algorithm. Your ads are boring."
-3. "The algorithm isn't broken. Your creatives are."
-4. "Meta doesn't hate you. Your ads just put people to sleep."
+This becomes the master narrative for ads, outreach, lead magnets, and email flows.
+
 
 ---
 
-### How to Use This Propaganda
+## The Mechanism: The Message Bench System
 
-**Cold Outreach Hook:**
-> "Most ecom owners blame the algorithm when ads stop working. But 9 times out of 10, it's not the algorithm - your ads are just boring."
+Goal: Turn 1 winning message into 10 saleable angles, every week.
 
-**Content Pillar:**
-All content reinforces "creative is king" message
+1. **Extract** from top 3 ads → hook, angle, objection, proof, CTA
+2. **Expand** into 10 controlled variations → one variable changed at a time so learning is clean
+3. **Anchor** the proof on the best-seller page → if the page does not match the promise, rebuild it in 7 days so scale holds
 
-**Qualification:**
-Attracts owners who take responsibility, repels blamers
-
----
-
-### Connection to Offers
-
-| Propaganda | | Offer |
-|------------|---|-------|
-| "Your ads are boring" | --> | "We create 10 fresh variations so you never run out of winning creatives" |
-| "Your ads put people to sleep" | --> | "One high-converting landing page so your ads actually sell" |
+**Bridge to offers:**
+- Offer #1 (Creative Variations) = "build the bench"
+- Offer #2 (Landing Page) = "make the bench convert"

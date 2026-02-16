@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Check, Menu, X, ArrowRight, Instagram, Youtube, Linkedin, TrendingUp, Zap } from "lucide-react";
+import { Check, Menu, X, ArrowRight, Instagram, Youtube, Linkedin, TrendingUp, Zap, Star, ChevronDown, Podcast } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
@@ -56,6 +56,7 @@ const CursorDot = () => {
     <div
       ref={dotRef}
       className="fixed top-0 left-0 pointer-events-none z-[9999] hidden md:block"
+      style={{ filter: "hue-rotate(200deg) saturate(1.3)" }}
     >
       <BlueStar6 size={24} />
     </div>
@@ -112,7 +113,7 @@ const Navbar = () => {
 
 const Hero = () => {
   return (
-    <section className="relative pt-16 pb-20 md:pt-28 md:pb-40 overflow-hidden bg-white min-h-0 md:min-h-[960px] flex items-center">
+    <section className="relative pt-8 pb-16 md:pt-16 md:pb-28 overflow-hidden bg-white min-h-0 md:min-h-[720px] flex items-center">
       {/* Decorative brand icons */}
       <div className="absolute top-28 left-[6%] opacity-15 pointer-events-none hidden lg:block">
         <BlueStar6 size={40} />
@@ -151,9 +152,24 @@ const Hero = () => {
             transition={{ duration: 0.5 }}
             className="inline-flex items-center px-5 py-2.5 rounded-full bg-[#B54C2B]/10 text-base font-bold text-[#B54C2B] border border-[#B54C2B]/20"
           >
-            Dla właścicielek eCommerce
+            Dla właścicieli eCommerce
           </motion.div>
 
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.05 }}
+            className="flex items-center gap-2 justify-center lg:justify-start"
+          >
+            <div className="flex">
+              {[...Array(5)].map((_, i) => (
+                <Star key={i} size={20} fill="#F7DDB5" stroke="#F7DDB5" />
+              ))}
+            </div>
+            <span className="text-sm text-[#2B2B2B]/60 font-medium">Zaufało nam 50+ marek</span>
+          </motion.div>
+
+          {/* TODO: Matthew feedback — headline should convey a clearer result/outcome */}
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -201,7 +217,8 @@ Porozmawiajmy o Twoim eCommerce
         </div>
 
         {/* Hero — Scrolling Ad Columns */}
-        <div className="relative h-[520px] md:h-[860px] w-full overflow-hidden hidden lg:block">
+        <div className="relative h-[520px] md:h-[700px] w-full overflow-hidden hidden lg:block">
+          <p className="text-center uppercase tracking-widest text-xs font-bold text-[#2B2B2B]/40 mb-3">Nasze Kreacje</p>
           {/* Fade masks top & bottom */}
           <div className="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-white to-transparent z-10 pointer-events-none" />
           <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-white to-transparent z-10 pointer-events-none" />
@@ -259,7 +276,7 @@ Porozmawiajmy o Twoim eCommerce
 
 const VSLSection = () => {
   return (
-    <section className="py-24 bg-[#4A8DCE] relative overflow-hidden" id="vsl">
+    <section className="py-20 bg-[#4A8DCE] relative overflow-hidden" id="vsl">
       {/* Decorative ivory brand icons */}
       <div className="absolute top-16 right-[10%] opacity-20 pointer-events-none hidden lg:block">
         <IvoryStarburst size={120} />
@@ -285,7 +302,7 @@ const VSLSection = () => {
 
             <p className="text-lg text-[#2B2B2B]">
               Kreacje, kampanie reklamowe i email marketing: połączone w jeden system, który generuje przychód przewidywalnie.{" "}
-              <strong>Zobacz, jak to robimy</strong>{" "}
+              <strong>Zobacz jak to robimy</strong>{" "}
               i dlaczego nasze podejście działa dla marek eCommerce od 50k do 1M PLN miesięcznie.
             </p>
 
@@ -303,9 +320,10 @@ const VSLSection = () => {
           <div className="relative">
             <div className="aspect-video bg-[#2B2B2B] rounded-2xl overflow-hidden shadow-xl">
               <iframe
-                src="https://www.youtube.com/embed/VIDEO_ID"
+                src="https://player.vimeo.com/video/VIMEO_VIDEO_ID?badge=0&autopause=0&player_id=0"
                 className="w-full h-full"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                title="adMate — Jak budujemy systemy sprzedaży eCommerce"
+                allow="autoplay; fullscreen; picture-in-picture"
                 allowFullScreen
               />
             </div>
@@ -333,20 +351,20 @@ const SocialProof = () => {
   const allLogos = [...logos, ...logos];
 
   return (
-    <section className="py-10 bg-white border-t border-b border-[#DBCABD] overflow-hidden">
-      <div className="container mb-8">
-        <p className="text-center font-black text-[#2B2B2B] uppercase tracking-widest text-3xl md:text-5xl font-heading">Marki, które rosną z nami</p>
+    <section className="py-8 bg-white border-t border-b border-[#DBCABD] overflow-hidden">
+      <div className="container mb-6">
+        <p className="text-center font-black text-[#2B2B2B] uppercase tracking-widest text-xl md:text-2xl font-heading">Marki, które rosną z nami</p>
       </div>
       <div className="relative">
         <motion.div
           className="flex gap-12 items-center"
           animate={{ x: ["0%", "-50%"] }}
-          transition={{ duration: 12, ease: "linear", repeat: Infinity }}
+          transition={{ duration: 8, ease: "linear", repeat: Infinity }}
         >
           {allLogos.map((logo, i) => (
             <div
               key={i}
-              className="h-32 md:h-44 flex items-center justify-center shrink-0"
+              className="h-24 md:h-32 flex items-center justify-center shrink-0"
             >
               <img src={logo.src} alt={logo.alt} className="h-full w-auto object-contain max-w-[280px]" />
             </div>
@@ -358,7 +376,7 @@ const SocialProof = () => {
 };
 
 const Offers = () => {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   const pillars = [
     {
@@ -395,10 +413,10 @@ const Offers = () => {
 
 
   return (
-    <section className="py-24 bg-white" id="offer">
+    <section className="py-20 bg-white" id="offer">
       <div className="container">
         {/* Giant heading with brand shape accent */}
-        <div className="relative mb-16">
+        <div className="relative mb-12">
           <h2 className="font-heading text-[13vw] md:text-[11vw] uppercase text-[#2B2B2B] leading-[0.85] text-center lg:text-left">
             Co robimy
           </h2>
@@ -517,7 +535,7 @@ const Process = () => {
   ];
 
   return (
-    <section className="py-24 bg-white" id="process">
+    <section className="py-20 bg-white" id="process">
       <div className="container">
         {/* Header row: big title left, subtitle + CTA right */}
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-4">
@@ -644,9 +662,9 @@ const CaseStudy = () => {
   const currentCase = caseStudies[currentSlide];
 
   return (
-    <section className="py-24 bg-white relative overflow-hidden" id="case-studies">
+    <section className="py-20 bg-white relative overflow-hidden" id="case-studies">
       <div className="container relative z-10">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-heading text-[#2B2B2B] mb-6">
             Historie sukcesu naszych klientów
           </h2>
@@ -770,7 +788,7 @@ const CaseStudy = () => {
 
 const About = () => {
   return (
-    <section className="py-24 bg-[#4A8DCE] relative" id="about">
+    <section className="py-20 bg-[#4A8DCE] relative border-b border-white/30" id="about">
       <div className="container grid lg:grid-cols-2 gap-12 items-center">
          <div className="relative">
             {/* Placeholder for Beata's Photo */}
@@ -782,36 +800,6 @@ const About = () => {
          <div className="space-y-6">
             <h2 className="text-5xl md:text-6xl lg:text-7xl font-heading text-[#F0E7DF] uppercase text-center lg:text-left">Cześć,<br />jestem Beata</h2>
             <p className="text-2xl font-heading text-[#F0E7DF]/70 italic text-center lg:text-left">Twoja partnerka od reklam</p>
-
-            {/* Social Icons - mobile only */}
-            <div className="flex items-center gap-6 justify-center lg:hidden">
-              <div className="flex gap-5">
-                <a href="https://www.linkedin.com/in/beata-wierzchowska/" target="_blank" rel="noopener noreferrer" className="w-14 h-14 rounded-full bg-[#F0E7DF] text-[#4A8DCE] flex items-center justify-center hover:bg-white transition-colors">
-                  <Linkedin size={28} />
-                </a>
-                <a href="https://instagram.com/beata.wierzchowska" target="_blank" rel="noopener noreferrer" className="w-14 h-14 rounded-full bg-[#F0E7DF] text-[#B54C2B] flex items-center justify-center hover:bg-white transition-colors">
-                  <Instagram size={28} />
-                </a>
-                <a href="https://www.youtube.com/@beata.wierzchowska" target="_blank" rel="noopener noreferrer" className="w-14 h-14 rounded-full bg-[#F0E7DF] text-[#2B2B2B] flex items-center justify-center hover:bg-white transition-colors">
-                  <Youtube size={28} />
-                </a>
-              </div>
-            </div>
-
-            <div className="space-y-5 text-[#2B2B2B] text-lg">
-               <p>
-                  Wiem, jak to jest prowadzić eCommerce. Codziennie żonglujesz produktem, logistyką, obsługą klienta i jeszcze masz dowozić marketing. Dlatego 9 lat temu postanowiłam zdjąć ten ciężar z barków właścicielek marek.
-               </p>
-               <p>
-                  W adMate nie jesteś kolejnym kontem do zarządzania. Jesteś partnerką, z którą wspólnie budujemy system sprzedaży. Ja odpowiadam za kreacje, kampanie i wyniki. Ty możesz wrócić do rozwijania produktu.
-               </p>
-               <p>
-                  50 milionów złotych w kampaniach reklamowych, ponad 1000 godzin konsultacji, 2000 przeszkolonych kursantów. Jestem praktykiem, nie teoretykiem. I jedno przekonanie: <strong>dobry marketing to taki, o którym nie musisz myśleć, bo po prostu działa.</strong>
-               </p>
-               <p className="font-bold">
-                  Porozmawiajmy o Twoim eCommerce.
-               </p>
-            </div>
 
             {/* Social Icons - desktop only */}
             <div className="hidden lg:flex items-center gap-6">
@@ -825,12 +813,49 @@ const About = () => {
                 <a href="https://www.youtube.com/@beata.wierzchowska" target="_blank" rel="noopener noreferrer" className="w-14 h-14 rounded-full bg-[#F0E7DF] text-[#2B2B2B] flex items-center justify-center hover:bg-white transition-colors">
                   <Youtube size={28} />
                 </a>
+                <a href="https://open.spotify.com/show/2wx0P3bQnPDYvS272XGLhQ" target="_blank" rel="noopener noreferrer" className="w-14 h-14 rounded-full bg-[#F0E7DF] text-[#1DB954] flex items-center justify-center hover:bg-white transition-colors">
+                  <Podcast size={28} />
+                </a>
               </div>
               <div className="flex items-center gap-2">
                 <img src="/images/brand/arrows/strzalka-1-ivory.png" alt="" className="w-20 -scale-x-100 rotate-12 opacity-70" />
                 <span className="text-[#F0E7DF]/70 font-heading text-base italic">Znajdź mnie<br />w social mediach</span>
               </div>
             </div>
+
+            {/* Social Icons - mobile only */}
+            <div className="flex items-center gap-6 justify-center lg:hidden">
+              <div className="flex gap-5">
+                <a href="https://www.linkedin.com/in/beata-wierzchowska/" target="_blank" rel="noopener noreferrer" className="w-14 h-14 rounded-full bg-[#F0E7DF] text-[#4A8DCE] flex items-center justify-center hover:bg-white transition-colors">
+                  <Linkedin size={28} />
+                </a>
+                <a href="https://instagram.com/beata.wierzchowska" target="_blank" rel="noopener noreferrer" className="w-14 h-14 rounded-full bg-[#F0E7DF] text-[#B54C2B] flex items-center justify-center hover:bg-white transition-colors">
+                  <Instagram size={28} />
+                </a>
+                <a href="https://www.youtube.com/@beata.wierzchowska" target="_blank" rel="noopener noreferrer" className="w-14 h-14 rounded-full bg-[#F0E7DF] text-[#2B2B2B] flex items-center justify-center hover:bg-white transition-colors">
+                  <Youtube size={28} />
+                </a>
+                <a href="https://open.spotify.com/show/2wx0P3bQnPDYvS272XGLhQ" target="_blank" rel="noopener noreferrer" className="w-14 h-14 rounded-full bg-[#F0E7DF] text-[#1DB954] flex items-center justify-center hover:bg-white transition-colors">
+                  <Podcast size={28} />
+                </a>
+              </div>
+            </div>
+
+            <div className="space-y-5 text-[#2B2B2B] text-lg">
+               <p>
+                  Wiem jak to jest prowadzić eCommerce. Codziennie żonglujesz produktem, logistyką, obsługą klienta i jeszcze masz dowozić marketing. Dlatego 9 lat temu postanowiłam zdjąć ten ciężar z barków właścicieli marek.
+               </p>
+               <p>
+                  W adMate nie jesteś kolejnym kontem do zarządzania. Jesteś partnerką, z którą wspólnie budujemy system sprzedaży. Ja odpowiadam za kreacje, kampanie i wyniki. Ty możesz wrócić do rozwijania produktu.
+               </p>
+               <p>
+                  50 milionów złotych w kampaniach reklamowych, ponad 1000 godzin konsultacji, 2000 przeszkolonych kursantów. Jestem praktykiem, nie teoretykiem. I jedno przekonanie: <strong>dobry marketing to taki, o którym nie musisz myśleć, bo po prostu działa.</strong>
+               </p>
+               <p className="font-bold">
+                  Porozmawiajmy o Twoim eCommerce.
+               </p>
+            </div>
+
          </div>
       </div>
     </section>
@@ -857,9 +882,9 @@ const Testimonials = () => {
   ];
 
   return (
-    <section className="py-24 bg-white" id="testimonials">
+    <section className="py-20 bg-white" id="testimonials">
       <div className="container">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-heading mb-6 text-[#2B2B2B]">Co mówią właścicielki sklepów?</h2>
           <p className="text-xl text-[#2B2B2B]/70 max-w-2xl mx-auto">
             Historie marek, które rosną z nami.
@@ -889,9 +914,89 @@ const Testimonials = () => {
   );
 };
 
+const FAQ = () => {
+  const [openIndex, setOpenIndex] = useState<number | null>(0);
+
+  const faqs = [
+    {
+      question: "Ile kosztuje współpraca z adMate?",
+      answer: "Ceny zależą od zakresu współpracy i Twoich celów. Zaczynamy od bezpłatnej konsultacji, na której omawiamy Twoje potrzeby i dopasowujemy ofertę. Napisz do nas, a przygotujemy indywidualną wycenę."
+    },
+    {
+      question: "Jak szybko zobaczę pierwsze wyniki?",
+      answer: "Pierwsze efekty widoczne są zazwyczaj w ciągu 2-4 tygodni od startu. Pełny system sprzedażowy budujemy w 90 dni, wtedy widzisz stabilny, przewidywalny wzrost przychodów."
+    },
+    {
+      question: "Czy muszę mieć duży budżet reklamowy na start?",
+      answer: "Nie. Pracujemy z markami o budżetach od 5 000 PLN miesięcznie. Kluczowe jest, żeby budżet był wystarczający do testowania kreacji i skalowania tego, co działa."
+    },
+    {
+      question: "Czym różni się adMate od typowej agencji?",
+      answer: "Nie jesteśmy agencją od wszystkiego. Specjalizujemy się w eCommerce i budujemy kompletne systemy sprzedaży: kreacje + kampanie + email marketing. Działamy jak Twój zewnętrzny dział marketingu, nie jak podwykonawca."
+    },
+    {
+      question: "Czy zajmujecie się też tworzeniem kreacji reklamowych?",
+      answer: "Tak, kreacje to nasz fundament. Tworzymy minimum 10 nowych wariantów miesięcznie: video, statyczne, karuzele i UGC. Kreacje to największa dźwignia ROAS."
+    },
+    {
+      question: "Dla jakich marek pracujecie?",
+      answer: "Pracujemy z markami eCommerce generującymi od 50k do 1M PLN miesięcznie. Najlepsze wyniki osiągamy w branżach: kosmetyki, moda, home & decor, suplementy i żywność."
+    }
+  ];
+
+  return (
+    <section className="py-20 bg-white" id="faq">
+      <div className="container max-w-3xl">
+        <h2 className="text-4xl md:text-5xl font-heading text-[#2B2B2B] text-center mb-12 uppercase">
+          Często zadawane pytania
+        </h2>
+
+        <div className="border-t border-[#DBCABD]">
+          {faqs.map((faq, i) => {
+            const isOpen = openIndex === i;
+            return (
+              <div
+                key={i}
+                className="border-b border-[#DBCABD] cursor-pointer"
+                onClick={() => setOpenIndex(isOpen ? null : i)}
+              >
+                <div className="flex items-center justify-between py-6">
+                  <h3 className="text-lg md:text-xl font-heading text-[#2B2B2B] pr-4">
+                    {faq.question}
+                  </h3>
+                  <ChevronDown
+                    size={20}
+                    className={`shrink-0 text-[#2B2B2B]/60 transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}
+                  />
+                </div>
+
+                <AnimatePresence>
+                  {isOpen && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.3 }}
+                      className="overflow-hidden"
+                    >
+                      <p className="pb-6 text-[#2B2B2B]/70 leading-relaxed">
+                        {faq.answer}
+                      </p>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
+};
+
 const Footer = () => {
   return (
-    <footer className="bg-[#2B2B2B] text-[#F0E7DF] py-24 border-t-4 border-[#B54C2B]">
+    <footer className="bg-[#2B2B2B] text-[#F0E7DF] py-20 border-t-4 border-[#B54C2B]">
       <div className="container grid md:grid-cols-4 gap-12">
         <div className="col-span-2 space-y-6">
           <div className="flex items-center">
@@ -901,6 +1006,7 @@ const Footer = () => {
             Łączymy praktyczną wiedzę o kampaniach marketingowych z zamiłowaniem do estetyki.
           </p>
           <a href="mailto:beata@admate.pl" className="block text-[#F7DDB5] font-bold text-lg hover:underline">beata@admate.pl</a>
+          <a href="tel:+48506128277" className="block text-[#F7DDB5] font-bold text-lg hover:underline">+48 506 128 277</a>
         </div>
 
         <div>
@@ -919,6 +1025,7 @@ const Footer = () => {
             <li><a href="https://www.linkedin.com/in/beata-wierzchowska/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-[#F7DDB5] transition-colors"><Linkedin size={18} /> LinkedIn</a></li>
             <li><a href="https://instagram.com/beata.wierzchowska" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-[#F7DDB5] transition-colors"><Instagram size={18} /> Instagram</a></li>
             <li><a href="https://www.youtube.com/@beata.wierzchowska" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-[#F7DDB5] transition-colors"><Youtube size={18} /> YouTube</a></li>
+            <li><a href="https://open.spotify.com/show/2wx0P3bQnPDYvS272XGLhQ" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-[#F7DDB5] transition-colors"><Podcast size={18} /> Podcast</a></li>
           </ul>
         </div>
       </div>
@@ -941,13 +1048,13 @@ export default function Home() {
       <Navbar />
       <Hero />
       <SocialProof />
+      <About />
       <VSLSection />
       <Offers />
       <CaseStudy />
       <Process />
-      <About />
       <Testimonials />
-      <section className="py-24 bg-[#B54C2B] text-center">
+      <section className="py-20 bg-[#B54C2B] text-center">
         <div className="container">
            <motion.h2
              initial={{ opacity: 0, y: 20 }}
@@ -967,6 +1074,7 @@ export default function Home() {
            </motion.div>
         </div>
       </section>
+      <FAQ />
       <Footer />
     </div>
   );
